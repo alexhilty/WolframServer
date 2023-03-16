@@ -1,0 +1,1 @@
+jupyter notebook --notebook-dir=/home/wolframnotes --ip 0.0.0.0 --allow-root --no-browser --NotebookApp.token='' --NotebookApp.password=''

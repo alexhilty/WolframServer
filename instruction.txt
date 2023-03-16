@@ -1,0 +1,14 @@
+build a docker image using the dockerfile
+
+run a new docker container using the image (enter a shell)
+
+run the wolfram engine installation script
+
+commit the docker container to a new image
+    sudo docker commit --change='CMD ["null"]' wolfram_r_temp wolfram_base_rr
+
+run a new docker container using new image
+    sudo docker run -it -p8887:8888 --name wolfram_r_1 --entrypoint "/bin/sh" wolfram_base_rr /home/scripts/wolf_setup.sh -u rrerr.qwerr@gmail.com -p rrerrqwerr
+
+start the docker container
+    sudo docker start wolfram_r_1

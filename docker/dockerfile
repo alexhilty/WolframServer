@@ -1,0 +1,12 @@
+FROM ubuntu:22.04
+
+ADD ./WolframLanguageForJupyter /home/scripts/WolframLanguageForJupyter
+COPY ./WolframEngine_13.2.0_LINUX.sh /home/scripts
+COPY ./wolf_setup.sh /home/scripts
+RUN apt update && apt install python3 -y
+RUN apt install python3-pip libgl1 libasound2 -y
+RUN mkdir /home/wolframnotes
+RUN pip3 install jupyter
+WORKDIR /home/scripts
+ENTRYPOINT ["/bin/bash"]
+EXPOSE 8888

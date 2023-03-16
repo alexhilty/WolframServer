@@ -1,0 +1,30 @@
+installed selenium
+installed geckodriver (latest)
+install firefox (from ftp and exported path to beginning of path variable)
+ran python script
+
+// enter bash terminal in running docker container (run any command from docker container)
+sudo docker exec -it <id> /bin/bash
+
+// create new container and run it from image
+sudo docker run -it --name <container_name> <image name> <command (from entrypoint)>
+
+// list docker containers or images
+sudo docker container ls
+sudo docker image ls
+
+// change parameters into new container
+sudo docker commit --change "CMD /home/script/wolf_setup.sh" <container_name> <new_image_name>
+
+// run with port
+sudo docker run -p8889:8888 --name wolfram_1 wolfram_base -u <username> -p <password>
+
+sudo docker run -it -p8889:8888 --name wolfram_4_1 --entrypoint "/bin/sh" wolfram_base4 /home/scripts/wolf_setup.sh -u fdewd.scecc@gmail.com -p fdewdscecc
+
+sudo docker start <container_name>
+
+
+// to install in wolfram_1
+libgl1 libasound2
+
+// wolfram_5 works!!!!
